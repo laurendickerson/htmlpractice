@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>New User Information</h1>
+
+<p1>Please enter your information below to be added to our mailing list!</p1>
+<hr>
+
+<form id="userForm"
+  <label for="lblfname">First name:</label>
+  <input type="text" id="inpfname" name="fname"><br><br>
+  <label for="lbllname">Last name:</label>
+  <input type="text" id="inplname" name="lname"><br><br>
+  <label for="lblemail">Email:</label>
+  <input type="text" id="inpemail" name="email"><br><br>
+  <button type="button" onclick="showAlert()">Submit</button>
+</form>
+<script>
+    function showAlert() {
+        const fname = document.getElementById('inpfname').value;
+        const lname = document.getElementById('inplname').value;
+        const email = document.getElementById('inpemail').value;
+
+        if (fname.length <= 6 || lname.length <= 6) {
+          alert("First name and Last name must be at least 6 characters!");
+        } else {
+          
+        alert("First Name: " + fname + "\nLast Name: " + lname + "\nEmail: " + email);
+        }
+      }
+
+</script>
+</body>
+</html>
